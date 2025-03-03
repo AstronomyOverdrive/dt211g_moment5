@@ -73,7 +73,7 @@ function drawBarChart(itemNames, itemApplicants) {
         },
         chart: {
             type: "bar",
-            width: 500
+            width: "100%"
         },
         plotOptions: {
             bar: {
@@ -109,7 +109,8 @@ function drawCircleChart(itemNames, itemApplicants) {
         },
         chart: {
             type: "pie",
-            width: 500
+            width: "100%",
+            height: "100%"
         },
         labels: itemNames,
         series: itemApplicants
