@@ -35,3 +35,24 @@ function drawCoursesChart(courseNames, courseApplicants) {
     const coursesChart = new ApexCharts(document.querySelector("#course-chart"), options);
     coursesChart.render();
 }
+
+/**
+ * Draw chart for the most applied for programs
+ * @param {Array} programNames - Names of the programs to show, in order
+ * @param {Array} programApplicants - Number of applicants to show, in order
+ */
+function drawProgramsChart(programNames, programApplicants) {
+    const options = {
+        theme: {
+            mode: "dark"
+        },
+        chart: {
+            type: 'pie',
+            width: 500
+        },
+        labels: programNames,
+        series: programApplicants
+    };
+    const programsChart = new ApexCharts(document.querySelector("#programs-chart"), options);
+    programsChart.render();
+}
