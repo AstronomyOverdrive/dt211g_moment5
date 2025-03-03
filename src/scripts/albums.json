@@ -1,0 +1,34 @@
+{
+    "records": [
+        {
+            "id": "diespitz_teeth",
+            "title": "Die Spitz - Teeth / The Revenge of Evangeline",
+            "desc": "Denna skiva inkluderar båda EPs som texas punk-bandet Die Spitz har släppt."
+        },
+        {
+            "id": "hurula_vi",
+            "title": "Hurula - Vi är människorna våra föräldrar varnade oss för",
+            "desc": "10-års jubileums utgåva av Hurulas första album som soloartist. (Han var tidigare gitarrist/sångare i punk-bandet Masshysteri.)"
+        },
+        {
+            "id": "nirvana_bleach",
+            "title": "Nirvana - Bleach",
+            "desc": "Första albumet från ett av om inte det mest kända grunge-bandet. Bleach har ett lite tyngre och råare ljud än senare Nirvana album och är det enda Nirvana albumet utan Dave Grohl."
+        },
+        {
+            "id": "pixies_surferrosa",
+            "title": "Pixies - Surfer Rosa",
+            "desc": "Pixies andra skiva som blev en stor inspiration till det som några år senare skulle bli grunge-scenen. Här hittar du även en av deras mest kända låtar, \"Where Is My Mind?\"."
+        },
+        {
+            "id": "thebeatles_letitbe",
+            "title": "The Beatles - Let It Be",
+            "desc": "The Beatles sista album som på senare tid fått många nya fans tack vare Peter Jacksons \"The Beatles: Get Back\" och \"Let It Be\"."
+        },
+        {
+            "id": "uncleacid_bloodlust",
+            "title": "Uncle Acid & The Deadbeats - Blood Lust",
+            "desc": "En psych klassiker som även uppskattas i många doom/stoner cirklar. Bandet beskrivs av flera som en blandning av Black Sabbath och The Beatles."
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+/* Import variables without a prefix */
+@use '../base/variables' as *;
+/* Import components */
+@use '../components/components';
+
+#nav-menu {
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+        padding: 1rem;
+        a {
+            display: block;
+        }
+    }
+}
+
+/* Checkbox styling */
+input[type="checkbox"] { /* Style checkbox as a menu button */
+    appearance: none; /* Clear default styling */
+    height: 3rem;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 1rem;
+    @extend .rounded-corners;
+}
+input[type="checkbox"]:checked ~ #nav-menu {
+    display: block;
+}
+#menu-label {
+    position: relative;
+    font-size: 1.5rem;
+    margin-bottom: -0.75rem;
+    top: -2.25rem; /* Put text over checkbox */
+}
+
+/* Responsive design */
+@media only screen and (min-width: 600px) { /* For viewports over 600px */
+    #nav-menu {
+        display: block;
+        border-radius: 0;
+        width: 100%;
+        margin-left: 0;
+        li {
+            width: auto;
+        }
+    }
+    #menu, #menu-label {
+        display: none;
+    }
+}
+@media only screen and (max-width: 600px) { /* For viewports under 600px */
+    #nav-menu {
+        display: none;
+        border-radius: 1rem; /* Can't use @extend inside of @media */
+        width: 95%;
+        margin-left: 2.5%;
+        li {
+            width: 100%;
+        }
+    }
+    #menu, #menu-label {
+        display: block;
+    }
+}

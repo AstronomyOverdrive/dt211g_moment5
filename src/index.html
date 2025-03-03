@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Startsida - Moment 5</title>
+        <link href="styles/main.scss" rel="stylesheet">
+        <script src="scripts/records.js" type="module"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Vinylstugan</h1>
+            <input type="checkbox" id="menu" name="menu">
+            <label for="menu" id="menu-label">Meny</label>
+            <nav id="nav-menu">
+                <ul>
+                    <li>
+                        <a id="active" href="./">Startsida</a>
+                    </li>
+                    <li>
+                        <a href="chart.html">Diagram</a>
+                    </li>
+                    <li>
+                        <a href="map.html">Karta</a>
+                    </li>
+                    <li>
+                        <a href="animation.html">Animering</a>
+                    </li>
+                    <li>
+                        <a href="sass.html">SASS</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Vinyl-skivor</h2>
+            <div class="flex-container">
+                <div class="item-container">
+                    <picture>
+                        <source srcset="images/nirvana_bleach.jpg?as=webp&width=500" type="image/webp">
+                        <img src="images/nirvana_bleach.jpg?width=500" alt="" class="image">
+                    </picture>
+                    <h3 class="title"></h3>
+                    <p class="description"></p>
+                </div>
+                <div class="item-container">
+                    <picture>
+                        <source srcset="images/pixies_surferrosa.jpg?as=webp&width=500" type="image/webp">
+                        <img src="images/pixies_surferrosa.jpg?width=500" alt="" class="image">
+                    </picture>
+                    <h3 class="title"></h3>
+                    <p class="description"></p>
+                </div>
+                <div class="item-container">
+                    <picture>
+                        <source srcset="images/hurula_vi.jpg?as=webp&width=500" type="image/webp">
+                        <img src="images/hurula_vi.jpg?width=500" alt="" class="image">
+                    </picture>
+                    <h3 class="title"></h3>
+                    <p class="description"></p>
+                </div>
+                <div class="item-container">
+                    <picture>
+                        <source srcset="images/diespitz_teeth.jpg?as=webp&width=500" type="image/webp">
+                        <img src="images/diespitz_teeth.jpg?width=500" alt="" class="image">
+                    </picture>
+                    <h3 class="title"></h3>
+                    <p class="description"></p>
+                </div>
+                <div class="item-container">
+                    <picture>
+                        <source srcset="images/uncleacid_bloodlust.jpg?as=webp&width=500" type="image/webp">
+                        <img src="images/uncleacid_bloodlust.jpg?width=500" alt="" class="image">
+                    </picture>
+                    <h3 class="title"></h3>
+                    <p class="description"></p>
+                </div>
+                <div class="item-container">
+                    <picture>
+                        <source srcset="images/thebeatles_letitbe.jpg?as=webp&width=500" type="image/webp">
+                        <img src="images/thebeatles_letitbe.jpg?width=500" alt="" class="image">
+                    </picture>
+                    <h3 class="title"></h3>
+                    <p class="description"></p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            © 2025 William Pettersson
+        </footer>
+    </body>
+</html>

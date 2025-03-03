@@ -1,0 +1,178 @@
+/* Record player animation */
+#record-player {
+    position: relative; /* Allows absolute positioning to be used within div */
+    width: 12rem;
+    height: 9rem;
+    border-radius: 1rem;
+    background: gray;
+    left: 50%;
+    transform: translate(-50%, 0); /* Center */
+    div {
+        position: absolute;
+    }
+    #vinyl-record {
+        top: 0.5rem;
+        left: 0.5rem;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%; /* Turn div into a circle */
+        background: black;
+        #vinyl-reflection {
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(45deg, black 0%, black 50%, lightgray 50%, lightgray 100%); /* Faux triangle */
+            border-radius: 100% 0% 0% 0%; /* Have edge roundness match the circle underneath */
+        }
+        #vinyl-label {
+            width: 2rem;
+            height: 2rem;
+            left: 3rem;
+            top: 3rem;
+            border-radius: 50%; /* Turn div into a circle */
+            border: 10px solid darkred;
+            background: darkgray;
+        }
+    }
+    #tone-arm {
+        height: 7rem;
+        width: 0.5rem;
+        top: 0.5rem;
+        right: 0.5rem;
+        transform-origin: top;
+        background: linear-gradient(white 0%, white 90%, deepskyblue 90%, deepskyblue 100%); /* Make end look like a cartridge */
+        border-radius: 1rem 1rem 1rem 1rem;
+    }
+}
+.play-animation1 {
+    animation: spin-record 2s linear; /* Close enough to 33RPM */
+    animation-iteration-count: 5;
+}
+.play-animation2 {
+    animation: move-arm 10s linear;
+}
+#animation-btn {
+    margin-top: 1rem;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0); /* Center */
+    #progress-bar {
+        position: relative;
+        width: 0%;
+        display: block;
+        border-bottom: 2px solid cyan;
+    }
+}
+#animation-btn:disabled {
+    #progress-bar {
+        transition: 10s linear;
+        width: 100%;
+    }
+}
+@keyframes spin-record {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes move-arm {
+    0% {
+        transform: rotate(0deg);
+    }
+    4% {
+        transform: rotate(30deg);
+    }
+    8% {
+        transform: rotate(30deg);
+    }
+    90% {
+        transform: rotate(55deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Ball animation */
+#ball-container {
+    position: relative; /* Allows absolute positioning to be used within div */
+    width: 100%;
+    aspect-ratio: 2/1;
+    background: black;
+    #ball {
+        position: absolute;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%; /* Turn div into a circle */
+        animation: bounce-ball 5s linear infinite;
+        transition: background 0.625s linear;
+    }
+}
+@keyframes bounce-ball {
+    0% {
+        top: 0;
+        left: 0;
+        background: seagreen;
+    }
+    12.5% {
+        top: calc(100% - 2rem);
+        left: calc(25% - 0.5rem);
+        background: indigo;
+    }
+    25% {
+        top: 0;
+        left: calc(50% - 1rem);
+        background: red;
+    }
+    37.5% {
+        top: calc(100% - 2rem);
+        left: calc(75% - 1.5rem);
+        background: darkgoldenrod;
+    }
+    50% {
+        top: 0;
+        left: calc(100% - 2rem);
+        background: seagreen;
+    }
+    62.5% {
+        top: calc(100% - 2rem);
+        left: calc(75% - 1.5rem);
+        background: indigo;
+    }
+    75% {
+        top: 0;
+        left: calc(50% - 1rem);
+        background: red;
+    }
+    87.5% {
+        top: calc(100% - 2rem);
+        left: calc(25% - 0.5rem);
+        background: darkgoldenrod;
+    }
+    100% {
+        top: 0;
+        left: 0;
+        background: seagreen;
+    }
+}
+
+/* Text animation */
+#text-container {
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+#text-animation {
+    position: relative;
+    font-size: 1.5rem;
+    top: calc(50% - 0.75rem); /* Center */
+    transition: transform 1s, color 1s linear 1s, text-shadow 1s linear 1s;
+}
+#text-animation:hover, #text-animation:active {
+    transform: scale(1.2, 1.2);
+    color: hotpink;
+    text-shadow: 2px 2px black;
+    text-decoration: underline;
+}
