@@ -1,0 +1,1 @@
+const e=document.getElementById("animation-btn"),t=document.getElementById("vinyl-record"),a=document.getElementById("tone-arm");e.addEventListener("click",function(){e.disabled=!0,t.classList.add("play-animation1"),a.classList.add("play-animation2"),setTimeout(()=>{t.classList.remove("play-animation1"),a.classList.remove("play-animation2"),e.disabled=!1},1e4)});
